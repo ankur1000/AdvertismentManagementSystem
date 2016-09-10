@@ -1,0 +1,47 @@
+<html><head>
+<title>(Type a title for your page here)</title>
+
+<script language=JavaScript>
+<!--
+function check_length(my_form)
+{
+
+// Reached the Maximum length so trim the textarea
+	//my_form.my_text.value = my_form.my_text.value.substring(0, 0);
+ 
+ // Maximum length not reached so update the value of my_text counter
+	my_form.text_num.value = my_form.my_text.value.length+1;
+       my_form.text_nume.value=my_form.text_num.value*5;
+
+
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+<center><h1>ENTER THE TEXT FOR YOUR AD<h1></center>
+<form  action=matri2.php name=my_form method=post>
+<textarea onKeyPress=check_length(this.form); onKeyDown=check_length(this.form); 
+ name=my_text rows=4 cols=30></textarea>
+    <br>                               
+<input size=0 value=0 name=text_num> Characters Entered
+<input size=0 value=0 name=text_nume> cost
+<select id="country" name="site">
+      <option value="page1">page1</option>
+      <option value="page2">page2</option>
+      <option value="page3">page3</option>
+    </select>
+     Date:<input type="date" name="date">
+            <br>
+
+
+    <input type="submit" value="Submit">submit
+
+
+</form>
+
+</body>
+</html>
